@@ -7,6 +7,7 @@ import {AntDesign} from "@expo/vector-icons";
 import { useDispatch } from 'react-redux';
 
 import {SettingScreen} from '../screens/SettingScreen'; 
+import {AudioScreen} from '../screens/SettingScreen';
 
 const Stack = createStackNavigator();
 export const SettingStackNavigator = ({navigation, route}) => {
@@ -29,7 +30,7 @@ export const SettingStackNavigator = ({navigation, route}) => {
             }}
         >
             <Stack.Screen name="Setting" component={SettingScreen} />
-
+            <Stack.Screen name="Audio" component={AudioScreen} />
         </Stack.Navigator>
     )
 }

@@ -8,6 +8,9 @@ import { useDispatch } from 'react-redux';
 
 import {HomeScreen} from '../screens/HomeScreen'
 import {GameScreen} from '../screens/GameScreen'
+import {AuthScreen} from '../screens/AuthScreen'
+import {NoLoginScreen} from '../screens/NoLoginScreen'
+import {JoinRoomScreen} from '../screens/JoinRoomScreen'
 
 
 
@@ -33,7 +36,9 @@ export const HomeStackNavigator = ({navigation, route}) => {
         >
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Game" component={GameScreen} />
-
+            <Stack.Screen name="Auth" component={AuthScreen} />
+            <Stack.Screen name="NoLogin" component={NoLoginScreen} />
+            <Stack.Screen name="JoinRoom" component={JoinRoomScreen} />
         </Stack.Navigator>
     )
 }

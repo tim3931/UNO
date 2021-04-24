@@ -5,7 +5,8 @@ import {AntDesign} from '@expo/vector-icons'
 import {useDispatch} from 'react-redux'
 
 const setting = [
-    { title: "test",
+    { 
+      title: "Audio",
       redirect: "Home",
     }
 ];
