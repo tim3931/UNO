@@ -6,17 +6,14 @@ import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {AntDesign} from "@expo/vector-icons";
 import { useDispatch } from 'react-redux';
 
-import {HomeScreen} from '../screens/HomeScreen'
-import {GameScreen} from '../screens/GameScreen'
-
-
+import {SettingScreen} from '../screens/SettingScreen'; 
 
 const Stack = createStackNavigator();
-export const HomeStackNavigator = ({navigation, route}) => {
+export const SettingStackNavigator = ({navigation, route}) => {
     const dispatch = useDispatch();
     return(
         <Stack.Navigator 
-            initialRouteName="Home"
+            initialRouteName="Setting"
             screenOptions={{
                 headerTitle: "UNO",
                 headerStyle: {
@@ -31,8 +28,7 @@ export const HomeStackNavigator = ({navigation, route}) => {
 
             }}
         >
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Game" component={GameScreen} />
+            <Stack.Screen name="Setting" component={SettingScreen} />
 
         </Stack.Navigator>
     )

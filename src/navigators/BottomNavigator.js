@@ -6,6 +6,7 @@ import {useSelector} from 'react-redux';
 
 
 import {HomeStackNavigator} from './HomeStackNavigator'
+import {SettingStackNavigator} from './SettingStackNavigator'
 
 
 const Tab = createBottomTabNavigator();
@@ -20,6 +21,8 @@ export default function BottomNavigator(){
             switch (route.name) {
               case "Home":
                 return <AntDesign name="home" size={size} color={color} />;
+              case "Setting":
+                return <AntDesign name="setting" size={size} color={color} />;
               default:
                 break;
             }
@@ -31,6 +34,7 @@ export default function BottomNavigator(){
         }}
       >
           <Tab.Screen name='Home' component={HomeStackNavigator} options={{title: "主頁"}}/>
+          <Tab.Screen name='Setting' component={SettingStackNavigator} options={{title: "設定"}}/>
       </Tab.Navigator>
   )
 }
