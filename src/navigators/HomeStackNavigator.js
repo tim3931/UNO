@@ -35,7 +35,7 @@ export const HomeStackNavigator = ({navigation, route}) => {
             }}
         >
             <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Game" component={GameScreen} />
+            <Stack.Screen name="Game" component={GameScreen} options={{headerLeft: null}} />
             <Stack.Screen name="Auth" component={AuthScreen} />
             <Stack.Screen name="NoLogin" component={NoLoginScreen} />
             <Stack.Screen name="JoinRoom" component={JoinRoomScreen} />

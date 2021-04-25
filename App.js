@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { LogBox } from 'react-native';
 import { Provider as StoreProvider } from "react-redux";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 
+
 import BottomNavigator from './src/navigators/BottomNavigator';
 import store from './src/store';
 
+
+
 export default function App() {
+  LogBox.ignoreLogs(['Unrecognized'])
+  
   const theme = {
     ...DefaultTheme,
     roundness: 2,
@@ -16,6 +22,8 @@ export default function App() {
       accent: "#00c01f",
     },
   };
+
+  
 
   return (
     <StoreProvider store={store}>

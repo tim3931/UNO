@@ -2,8 +2,10 @@ import React, {useRef, useState, useEffect} from 'react'
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native'
 import {useDispatch, useSelector} from 'react-redux'
 
+
 export const HomeScreen = ({navigation, route}) => {
     const dispatch = useDispatch();
+
     let UI = [{
         text: "Login", 
         redirect: "Auth"
